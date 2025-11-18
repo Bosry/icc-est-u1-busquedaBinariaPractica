@@ -53,8 +53,7 @@ public class PersonaController {
   }
 
   public void printEdad(Persona[] personas, int left, int mid, int right) {
-    System.out.println(
-        "Bajo: " + left + ", Alto: " + right + ", Centro: " + mid + ", valorCentro: " + personas[mid].getEdad());
+    System.out.println("Bajo: " + left + ", Alto: " + right + ", Centro: " + mid + ", valorCentro: " + personas[mid].getEdad());
     System.out.print("[");
     for (int i = mid; i < personas.length; i++) {
       if (i == personas.length - 1) {

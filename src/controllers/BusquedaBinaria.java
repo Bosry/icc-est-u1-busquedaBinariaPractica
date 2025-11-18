@@ -57,7 +57,8 @@ public class BusquedaBinaria {
         while (left <= right) {
 
             int mid = (left + right) / 2;
-            personaController.printEdad(personas,left, mid, right);
+            personaController.printEdad(personas, left, mid, right);
+            System.out.println(direccion(left, right));
 
             int compare = personas[mid].getEdad();
 
@@ -70,12 +71,20 @@ public class BusquedaBinaria {
             } else {
                 right = mid - 1;
             }
-            
+
         }
 
         return null;
     }
 
-    
+    public String direccion(int buscado, int valorCentro) {
+        if (buscado == valorCentro) {
+            return "encontrado";
+        } else if (buscado < valorCentro) {
+            return "izquieda";
+        } else {
+            return "derecha";
+        }
+    }
 
 }
