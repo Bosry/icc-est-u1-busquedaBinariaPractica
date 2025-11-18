@@ -6,8 +6,6 @@ import view.ShowConsole;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        System.out.println("Hello, World!");
-
         ShowConsole showConsole = new ShowConsole();
         PersonaController personaController = new PersonaController();
 
@@ -23,13 +21,18 @@ public class App {
         };
 
         // 2. Ordenar por nombre
-        personaController.sortByName(personas);
+        //personaController.sortByName(personas);
+        personaController.sortByAge(personas);
+        personaController.printArreglo(personas);
+        personaController.printEdad(personas, 0, (personas.length - 1)/2, personas.length - 1);
 
         // 3. Búsqueda binaria por nombre
         BusquedaBinaria busquedaBinaria = new BusquedaBinaria();
-        Persona encontrada =busquedaBinaria.binarySearchByName(personas, "Carmen");
+        //Persona encontrada =busquedaBinaria.binarySearchByName(personas, "Carmen");
+        Persona encontrada = busquedaBinaria.binarySearchByAge(personas, 27);
 
         // 4. Mostrar resultado
-        showConsole.showPersonResult(encontrada, "Carmen");
+        //showConsole.showPersonResult(encontrada, "Carmen");
+        showConsole.showPersonResult(encontrada, 27);
     }
 }

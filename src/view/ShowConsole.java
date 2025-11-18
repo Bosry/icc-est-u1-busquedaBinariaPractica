@@ -20,5 +20,12 @@ public class ShowConsole {
         }
 
     }
+    public void showPersonResult(Persona persona, int edadBuscada){
+        if (persona == null) {
+            System.out.println("La persona con edad " + edadBuscada + " no se encuentra en el arreglo.");
+        } else {
+            System.out.println("La persona con la edad " + persona.getEdad() + " es " + persona.getNombre());
+        }
+    }
     
 }
